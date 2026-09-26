@@ -1,75 +1,20 @@
-# Nuxt Minimal Starter
+# Новости
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Мини-сервис новостей на Nuxt 4 и Tailwind CSS: категории → список новостей с пейджингом → новость.
 
-## Setup
+Монолит: фронтенд (`app/`) и бэкенд (`server/`) работают в одном приложении, данные лежат в `server/data/news.ts`.
 
-Make sure to install dependencies:
+## Запуск
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Откройте http://localhost:3000
 
-Build the application for production:
+## API
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- `GET /api/categories` — категории
+- `GET /api/categories/:id/news?page=0` — новости категории, по 10 на страницу
+- `GET /api/news/:id` — полная новость
